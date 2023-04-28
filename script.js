@@ -58,8 +58,8 @@ eraser_button.addEventListener('click', function(){
 
 
 
-// let reset = document.querySelector('#reset');
+let reset = document.querySelector('#reset');
 
-// reset.addEventListener('click', function(){
-//     grids.forEach(grid  => {grid.style.backgroundColor = 'white'});
-// })
+reset.addEventListener('click', function(){
+    grids.forEach(grid  => {grid.style.backgroundColor = 'white'});
+})
