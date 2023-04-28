@@ -41,20 +41,20 @@ eraser_button.addEventListener('click', function(){
     })
 })});       
 
-// let color_select = document.querySelector('#color_btn');
-// let colorSelectValue = document.querySelector('#color_value');
+let color_select = document.querySelector('#color_btn');
+let colorSelectValue = document.querySelector('#color_value');
 
-// color_select.addEventListener('click',function(){
-//     colorSelectValue.click();
-// })
+color_select.addEventListener('click',function(){
+    colorSelectValue.click();
+})
 
-// colorSelectValue.addEventListener('click',function(){
-//     paint_color = colorSelectValue.value;
-//     grids.forEach(grid => {grid.addEventListener('mouseover', function(){
-//         grid.style.backgroundColor = paint_color;
+colorSelectValue.addEventListener('change',function(){
+    paint_color = colorSelectValue.value;
+    grids.forEach(grid => {grid.addEventListener('mouseover', function(){
+        grid.style.backgroundColor = paint_color;
     
-//     })})    
-// })
+    })})    
+})
 
 
 

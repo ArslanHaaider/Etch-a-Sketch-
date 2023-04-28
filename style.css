@@ -36,11 +36,11 @@
     justify-content: center;
 }
 
-/* #color_btn{
+#color_btn{
     display: flex;
     flex-direction: column;
     height: 50px;
-} */
+}
 html {
     background:
     conic-gradient(#476cff 25%,#0000 0) 0 0/calc(2*32px) calc(32px/9.5),
