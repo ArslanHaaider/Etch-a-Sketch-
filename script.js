@@ -1,6 +1,7 @@
 let container = document.querySelector('.container');
 //16*16 divs inside container using for loop
 let grid_size = 16
+let paint_color = 'black';
 create_grid();
 let size_button = document.querySelector('.change_size');
 size_button.addEventListener('click', function(){
@@ -24,3 +25,41 @@ function create_grid(){
         }
     }
 }
+
+let grids = document.querySelectorAll('.col');
+
+grids.forEach(grid => {grid.addEventListener('mouseover', function(){
+    grid.style.backgroundColor = paint_color;
+
+})})
+
+let eraser_button = document.querySelector('.eraser');
+
+eraser_button.addEventListener('click', function(){
+    grids.forEach(grid => {grid.addEventListener('mouseover', function(){
+        grid.style.backgroundColor = 'white';
+    })
+})});       
+
+// let color_select = document.querySelector('#color_btn');
+// let colorSelectValue = document.querySelector('#color_value');
+
+// color_select.addEventListener('click',function(){
+//     colorSelectValue.click();
+// })
+
+// colorSelectValue.addEventListener('click',function(){
+//     paint_color = colorSelectValue.value;
+//     grids.forEach(grid => {grid.addEventListener('mouseover', function(){
+//         grid.style.backgroundColor = paint_color;
+    
+//     })})    
+// })
+
+
+
+// let reset = document.querySelector('#reset');
+
+// reset.addEventListener('click', function(){
+//     grids.forEach(grid  => {grid.style.backgroundColor = 'white'});
+// })
