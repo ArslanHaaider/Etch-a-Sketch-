@@ -24,14 +24,12 @@ function create_grid(){
             row.appendChild(col);
         }
     }
+    let grids = document.querySelectorAll('.col');
+    grids.forEach(grid => {grid.addEventListener('mouseover', function(){
+        grid.style.backgroundColor = paint_color;
+    })})
 }
-
 let grids = document.querySelectorAll('.col');
-
-grids.forEach(grid => {grid.addEventListener('mouseover', function(){
-    grid.style.backgroundColor = paint_color;
-
-})})
 
 let eraser_button = document.querySelector('.eraser');
 
