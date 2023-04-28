@@ -34,6 +34,7 @@ let grids = document.querySelectorAll('.col');
 let eraser_button = document.querySelector('.eraser');
 
 eraser_button.addEventListener('click', function(){
+    let grids = document.querySelectorAll('.col');
     grids.forEach(grid => {grid.addEventListener('mouseover', function(){
         grid.style.backgroundColor = 'white';
     })
@@ -59,5 +60,6 @@ colorSelectValue.addEventListener('change',function(){
 let reset = document.querySelector('#reset');
 
 reset.addEventListener('click', function(){
+    let grids = document.querySelectorAll('.col');
     grids.forEach(grid  => {grid.style.backgroundColor = 'white'});
 })
