@@ -13,6 +13,10 @@ size_button.addEventListener('click', function(){
     }
     container.innerHTML = '';
     create_grid();
+    let grids = document.querySelectorAll('.col');
+    grids.forEach(grid => {grid.addEventListener('mouseover', function(){
+    grid.style.backgroundColor = paint_color;
+})})
 })
 
 function create_grid(){
@@ -24,7 +28,7 @@ function create_grid(){
         container.insertAdjacentElement('beforeend', grid);
     }
     let grids = document.querySelectorAll('.col');
-    grids.forEach(grid => {grid.addEventListener('mouseover', function(){
+        grids.forEach(grid => {grid.addEventListener('mouseover', function(){
         grid.style.backgroundColor = paint_color;
     })})
 }
@@ -61,4 +65,4 @@ let reset = document.querySelector('#reset');
 reset.addEventListener('click', function(){
     
     grids.forEach(grid  => {grid.style.backgroundColor = 'white'});
-})
+})  
