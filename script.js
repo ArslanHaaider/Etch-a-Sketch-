@@ -65,4 +65,5 @@ let reset = document.querySelector('#reset');
 reset.addEventListener('click', function(){
     
     grids.forEach(grid  => {grid.style.backgroundColor = 'white'});
+    colorSelectValue.value = '#000000';  
 })  
