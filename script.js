@@ -2,6 +2,8 @@ let container = document.querySelector('.container');
 //16*16 divs inside container using for loop
 let grid_size = 16
 let paint_color = 'black';
+
+
 create_grid();
 let size_button = document.querySelector('.change_size');
 size_button.addEventListener('click', function(){
@@ -14,15 +16,12 @@ size_button.addEventListener('click', function(){
 })
 
 function create_grid(){
-    for(let x = 0; x<=grid_size; x++){
-        let row = document.createElement('div');
-        row.classList.add('row');
-        container.appendChild(row);
-        for(let y = 0;y<=grid_size ;y++){
-            let col = document.createElement('div');
-            col.classList.add('col');
-            row.appendChild(col);
-        }
+    container.style.gridTemplateColumns = `repeat(${grid_size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${grid_size}, 1fr)`;
+    for(let i=0; i<grid_size*grid_size; i++){
+        let grid = document.createElement('div');
+        grid.classList.add('col');
+        container.insertAdjacentElement('beforeend', grid);
     }
     let grids = document.querySelectorAll('.col');
     grids.forEach(grid => {grid.addEventListener('mouseover', function(){
@@ -60,6 +59,6 @@ colorSelectValue.addEventListener('change',function(){
 let reset = document.querySelector('#reset');
 
 reset.addEventListener('click', function(){
-    let grids = document.querySelectorAll('.col');
+    
     grids.forEach(grid  => {grid.style.backgroundColor = 'white'});
 })
